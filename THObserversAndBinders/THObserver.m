@@ -85,7 +85,7 @@ typedef enum THObserverBlockArgumentsKind {
 #pragma mark -
 #pragma mark Block-based observer construction.
 
-+ (id)observerForObject:(id)object
++ (instancetype)observerForObject:(id)object
                 keyPath:(NSString *)keyPath
                   block:(THObserverBlock)block
 {
@@ -96,7 +96,7 @@ typedef enum THObserverBlockArgumentsKind {
                     blockArgumentsKind:THObserverBlockArgumentsNone];
 }
 
-+ (id)observerForObject:(id)object
++ (instancetype)observerForObject:(id)object
                 keyPath:(NSString *)keyPath
          oldAndNewBlock:(THObserverBlockWithOldAndNew)block
 {
@@ -107,7 +107,7 @@ typedef enum THObserverBlockArgumentsKind {
                     blockArgumentsKind:THObserverBlockArgumentsOldAndNew];
 }
 
-+ (id)observerForObject:(id)object
++ (instancetype)observerForObject:(id)object
                 keyPath:(NSString *)keyPath
                 options:(NSKeyValueObservingOptions)options
             changeBlock:(THObserverBlockWithChangeDictionary)block
@@ -139,7 +139,7 @@ static NSUInteger SelectorArgumentCount(SEL selector)
     return argumentCount;
 }
 
-+ (id)observerForObject:(id)object
++ (instancetype)observerForObject:(id)object
                 keyPath:(NSString *)keyPath
                 options:(NSKeyValueObservingOptions)options
                  target:(id)target
@@ -230,7 +230,7 @@ static NSUInteger SelectorArgumentCount(SEL selector)
     return ret;
 }
 
-+ (id)observerForObject:(id)object
++ (instancetype)observerForObject:(id)object
                 keyPath:(NSString *)keyPath
                  target:(id)target
                  action:(SEL)action
@@ -242,7 +242,7 @@ static NSUInteger SelectorArgumentCount(SEL selector)
 #pragma mark -
 #pragma mark Value-only target-action observers.
 
-+ (id)observerForObject:(id)object
++ (instancetype)observerForObject:(id)object
                 keyPath:(NSString *)keyPath
                 options:(NSKeyValueObservingOptions)options
                  target:(id)target
@@ -292,7 +292,7 @@ static NSUInteger SelectorArgumentCount(SEL selector)
     return ret;
 }
 
-+ (id)observerForObject:(id)object
++ (instancetype)observerForObject:(id)object
                 keyPath:(NSString *)keyPath
                  target:(id)target
             valueAction:(SEL)valueAction

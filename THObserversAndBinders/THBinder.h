@@ -12,14 +12,14 @@
 
 typedef id(^THBinderTransformationBlock)(id value);
 
-+ (id)binderFromObject:(id)fromObject keyPath:(NSString *)fromKeyPath
++ (instancetype)binderFromObject:(id)fromObject keyPath:(NSString *)fromKeyPath
               toObject:(id)toObject keyPath:(NSString *)toKeyPath;
 
-+ (id)binderFromObject:(id)fromObject keyPath:(NSString *)fromKeyPath
++ (instancetype)binderFromObject:(id)fromObject keyPath:(NSString *)fromKeyPath
               toObject:(id)toObject keyPath:(NSString *)toKeyPath
       valueTransformer:(NSValueTransformer *)valueTransformer;
 
-+ (id)binderFromObject:(id)fromObject keyPath:(NSString *)fromKeyPath
++ (instancetype)binderFromObject:(id)fromObject keyPath:(NSString *)fromKeyPath
               toObject:(id)toObject keyPath:(NSString *)toKeyPath
    transformationBlock:(THBinderTransformationBlock)transformationBlock;
 

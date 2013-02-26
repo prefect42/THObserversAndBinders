@@ -17,15 +17,15 @@ typedef void(^THObserverBlock)(void);
 typedef void(^THObserverBlockWithOldAndNew)(id oldValue, id newValue);
 typedef void(^THObserverBlockWithChangeDictionary)(NSDictionary *change);
 
-+ (id)observerForObject:(id)object
++ (instancetype)observerForObject:(id)object
                 keyPath:(NSString *)keyPath
                   block:(THObserverBlock)block;
 
-+ (id)observerForObject:(id)object
++ (instancetype)observerForObject:(id)object
                 keyPath:(NSString *)keyPath
          oldAndNewBlock:(THObserverBlockWithOldAndNew)block;
 
-+ (id)observerForObject:(id)object
++ (instancetype)observerForObject:(id)object
                 keyPath:(NSString *)keyPath
                 options:(NSKeyValueObservingOptions)options
             changeBlock:(THObserverBlockWithChangeDictionary)block;
@@ -56,12 +56,12 @@ typedef void(^THObserverBlockWithChangeDictionary)(NSDictionary *change);
 //
 // Both the observer and the target are weakly referenced internally.
 
-+ (id)observerForObject:(id)object
++ (instancetype)observerForObject:(id)object
                 keyPath:(NSString *)keyPath
                  target:(id)target
                  action:(SEL)action;
 
-+ (id)observerForObject:(id)object
++ (instancetype)observerForObject:(id)object
                 keyPath:(NSString *)keyPath
                 options:(NSKeyValueObservingOptions)options
                  target:(id)target
@@ -80,12 +80,12 @@ typedef void(^THObserverBlockWithChangeDictionary)(NSDictionary *change);
 //
 // Both the observer and the target are weakly referenced internally.
 
-+ (id)observerForObject:(id)object
++ (instancetype)observerForObject:(id)object
                 keyPath:(NSString *)keyPath
                  target:(id)target
             valueAction:(SEL)valueAction;
 
-+ (id)observerForObject:(id)object
++ (instancetype)observerForObject:(id)object
                 keyPath:(NSString *)keyPath
                 options:(NSKeyValueObservingOptions)options
                  target:(id)target
